@@ -9,6 +9,7 @@ import './App.css';
 import Contacto from "./components/Contacto";
 import Inicio from "./components/Inicio";
 import Nosotros from "./components/Nosotros";
+import User from "./components/User";
 
 function App() {
   return (
@@ -27,14 +28,17 @@ function App() {
         </div>
         <hr/>
         <Switch>
-          <Route path="/" exact>
-            <Inicio/>
+          <Route path="/nosotros/:id">
+            <User/>
           </Route>
           <Route path="/contacto">
             <Contacto/>
           </Route>
           <Route path="/nosotros">
             <Nosotros/>
+          </Route>
+          <Route path="/" exact>
+            <Inicio/>
           </Route>
         </Switch>
       </div>
